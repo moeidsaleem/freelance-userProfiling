@@ -1,6 +1,6 @@
 <link rel="stylesheet" type="text/css" href="app/components/login/login.css">
 <section>
-	
+	<h1>{{name}}</h1>
 
 <div class="container">
     <div class="row vertical-offset-100">
@@ -10,7 +10,7 @@
 			    	<h3 class="panel-title">Please sign in</h3>
 			 	</div>
 			  	<div class="panel-body">
-			    	<form accept-charset="UTF-8" role="form">
+			    	<form accept-charset="UTF-8" role="form" action="/signin" method="POST">
                     <fieldset>
 			    	  	<div class="form-group">
 			    		    <input class="form-control" placeholder="E-mail" name="email" type="text">

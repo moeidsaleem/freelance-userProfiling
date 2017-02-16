@@ -9,8 +9,18 @@ let app = express(); /*Express app*/
 
 // connecting to datbase
 // Mongoose Connect
-mongoose.connect('mongodb://atrixdigital:atrix123@ds153669.mlab.com:53669/userproject');
+// mongoose.connect('mongodb://atrixdigital:atrix123@ds153669.mlab.com:53669/userproject');
 let db = mongoose.connection; /*Database*/
+
+
+
+app.post('/signin', function(req,res){
+
+	db.insert({name:req.body.name, email:req.body.email});
+
+
+
+})
 
 // Client-side
 app.use(express.static(__dirname+'/client'));
